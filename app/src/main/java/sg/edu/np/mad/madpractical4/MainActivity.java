@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Initialize a new User object
-        sg.edu.np.mad.madpractical3.User user = new sg.edu.np.mad.madpractical3.User( "MAD", "MAD Developer", 1, false);
+        sg.edu.np.mad.madpractical4.User user = new sg.edu.np.mad.madpractical4.User( "MAD", "MAD Developer", 1, false);
 
         // Get the TextViews and Button from the layout
         TextView tvName = findViewById(R.id.tvName);
