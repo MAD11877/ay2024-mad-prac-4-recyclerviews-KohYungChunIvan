@@ -7,15 +7,19 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class UserViewHolder extends RecyclerView.ViewHolder {
-    TextView txtName;
-    TextView txtDescription;
-    ImageView imgUser;
+    ImageView imageViewSmall, imageViewLarge;
 
-    public UserViewHolder(View itemView) {
+
+    TextView name;
+    TextView description;
+
+    public UserViewHolder (View itemView) {
         super(itemView);
-        txtName = itemView.findViewById(R.id.textView2);
-        txtDescription = itemView.findViewById(R.id.textView3);
-        imgUser = itemView.findViewById(R.id.imageView5);
+        name = itemView.findViewById(R.id.name);
+        description = itemView.findViewById(R.id.description);
+        imageViewSmall = itemView.findViewById(R.id.profileSmall);
+        imageViewLarge = itemView.findViewById(R.id.bigImage);
+        imageViewLarge.setVisibility(View.GONE);
 
     }
 }

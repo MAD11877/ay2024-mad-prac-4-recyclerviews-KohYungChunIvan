@@ -53,9 +53,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        String userName = getIntent().getStringExtra("name");
+        String description = getIntent().getStringExtra("description");
         Integer randomNumber = getIntent().getIntExtra("randomNumber", 0);
-        String name = user.name + " " + randomNumber;
+        String name = userName + " " + randomNumber;
 
         tvName.setText(name);
+        tvDescription.setText(description + " " + randomNumber);
     }
 }

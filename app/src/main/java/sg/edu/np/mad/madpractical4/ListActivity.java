@@ -1,6 +1,12 @@
 package sg.edu.np.mad.madpractical4;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -26,8 +33,7 @@ public class ListActivity extends AppCompatActivity {
             return insets;
         });
 
-
-
+        //Creating List of 20  users
         ArrayList<User> userList = new ArrayList<>();
         userList.add(new User("Ben","Engineer", 2, true));
         userList.add(new User("Alice", "Doctor", 3, false));
@@ -49,11 +55,15 @@ public class ListActivity extends AppCompatActivity {
         userList.add(new User("Rachel", "Pilot", 19, true));
         userList.add(new User("Sam", "Paramedic", 20, false));
 
+
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        UserAdapter mAdapter = new UserAdapter(userList, this);
+        UserAdapter userAdapter =  new UserAdapter(userList, this);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
+        recyclerView.setAdapter(userAdapter);
+
+
+
     }
 }
