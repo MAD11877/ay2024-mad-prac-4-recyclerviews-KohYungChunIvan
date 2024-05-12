@@ -48,6 +48,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
         }
         if (lastDigit == 7){
             holder.imageViewLarge.setVisibility(View.VISIBLE);
+            holder.imageViewSmall.setVisibility(View.GONE);
         }
         else{
             holder.imageViewLarge.setVisibility(View.GONE);
